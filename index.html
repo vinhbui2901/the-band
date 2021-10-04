@@ -40,9 +40,9 @@
 
         <div id="slides">
             <!-- ảnh 1 --> 
-            
             <div class="text-content">
-                <h2 class="text-heading1">Los Angeles</h2>
+                <img id="imgslide" onclick="changeimg()" src="./assets/img/slide1.jpg">
+                <h2 class="text-heading1" onclick="changetext()">Los Angeles</h2>
                 <div class="text-heading2">We had the best time playing at Venice Beach!</div>
             </div>
             <!-- ảnh 2 -->
@@ -267,9 +267,36 @@
                 else{
                     header.style.height = null;
                 } 
-            
-           }
-       }
+            }
+        }
+        
+        </script>
+         <!-- slide chay -->
+        <script>
+            var numberslide = 1;
+            changeimg = function(){
+                var imgs = ["./assets/img/slide1.jpg", "./assets/img/slide2.jpg", "./assets/img/slide3.jpg"]
+                document.getElementById('imgslide').src = imgs[numberslide];
+                numberslide++;
+                if(numberslide == 3){
+                    numberslide=0;
+                }
+            }
+            setInterval(changeimg,12000);
+
+        </script>
+
+  <script>
+      var numbertext = 1; 
+      changetext = function(){
+          var text1 = ["Los Angeles", "New York", "Chicago"]
+          document.getElementsByClassName('text-heading1').h2 = text1[numbertext];
+          numbertext++;
+          if (numbertext == 3) {
+              numbertext = 0;
+          }
+      }
+      setInterval(changetext,1000)
   </script>
 </body>
 

@@ -165,10 +165,18 @@ background-color: #f44336;
     position: relative;/* xác đinh tọa độ của slides ở góc trên trái */
     margin-top: 46px;
     padding-top: 50%;/* cho height bằng 50% của chiều ngang */
-    background: url('/assets/img/slider-1.jpg') top center / cover no-repeat ;
+    
    /* top:cố định nép trên center:cho ảnh về chính giữa, cover:size,no-repeat:cho ảnh ko lặp lại */
 }
-#slides .text-content, #slides .text-content2, #slides .text-content3 {
+#slides .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: white;
+    left: 50%;/* cho chữ ra gữa khung hình */
+    transform: translateX(-50%);/* cho chữ dài bên dưới ra giữa */
+    text-align: center;/* cho chữ trên ra chính giữa */
+}
+#imgslide{
     position: absolute;
     bottom: 47px;
     color: white;
@@ -182,10 +190,14 @@ font-weight: 500;
 font-size: 24px;
 /* cỡ chữ */
 padding-bottom: 16px;
+color:white;
+}
+#slides .text-heading2{
+    color: white;
 }
 #contents .content-heading{
 width: 800px;
-max-width: 100%;
+max-width: 2000px;
 margin-left: auto;
 margin-right: auto;
 padding-left: 16px;
